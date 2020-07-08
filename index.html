@@ -7,11 +7,18 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>Bookmarks</h1>
+      <h1 class="page-title">Bookmarks</h1>
+      <h2 class="page-desc">
+        Ya got too many tabs open! Put stuff here to check out later:
+      </h2>
 
       <form class="add-items">
-        <input type="text" name="link" placeholder="Link" required />
-        <input type="text" name="description" placeholder="Description" />
+        <input type="text" name="link" placeholder="Paste link here" required />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description (optional)"
+        />
         <input type="submit" value="+ Add Item" />
       </form>
       <ul class="listing">
