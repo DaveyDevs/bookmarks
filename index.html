@@ -2,28 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Bookmarks</title>
+    <title>📕Bookmarks📗</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
-      <h1 class="page-title">Bookmarks</h1>
+      <h1 class="page-title">📕Bookmarks📗</h1>
       <h2 class="page-desc">
         Ya got too many tabs open! Put stuff here to check out later:
       </h2>
 
       <form class="add-items">
-        <input type="text" name="link" placeholder="Paste link here" required />
-        <input
-          type="text"
-          name="description"
-          placeholder="Description (optional)"
-        />
-        <input type="submit" value="+ Add Item" />
+        <label for="lflink">Paste link here:</label>
+        <input id="lflink" type="text" name="link" required />
+        <label for="lfdesc">Description (optional):</label>
+        <input id="lfdesc" type="text" name="description" />
+        <input class="add-button" type="submit" value="+ Add Item" />
       </form>
+      <div class="list-wrapper">
+        <h2>Your list:</h2>
       <ul class="listing">
-        <li>Example item</button></li>
-        <li>Example item 2</li>
+      </div>
       </ul>
     </div>
 
