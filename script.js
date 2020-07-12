@@ -13,6 +13,12 @@ function populateItems() {
       item.DESC ? item.DESC : item.LINK
     }</a><button class="delete-btn">Delete</button></li>`;
   }).join("");
+
+  const DELETEBTN = document.querySelectorAll(".delete-btn");
+
+  DELETEBTN.forEach((button) => {
+    button.addEventListener("click", deleteItem);
+  });
 }
 
 function addItem(e) {
@@ -36,17 +42,7 @@ function addItem(e) {
   populateItems();
 
   this.reset(); //clears a form
-
-  //Had to put this here too, so that the delete button works after adding items
-
-  const DELETEBTN = document.querySelectorAll(".delete-btn");
-
-  DELETEBTN.forEach((button) => {
-    button.addEventListener("click", deleteItem);
-  });
 }
-
-//Need to delete in two places? The live list and local storage? I figured out how to do the idnumber thing, let's see if that's helpful
 
 function deleteItem() {
   let check = confirm("Are you sure?");
@@ -68,23 +64,9 @@ function deleteItem() {
     localStorage.setItem("items", JSON.stringify(ITEMS));
 
     populateItems();
-
-    const DELETEBTN = document.querySelectorAll(".delete-btn");
-
-    DELETEBTN.forEach((button) => {
-      button.addEventListener("click", deleteItem);
-    });
   }
 }
 
 populateItems();
 
 ADDITEMS.addEventListener("submit", addItem);
-
-window.onload = function () {
-  const DELETEBTN = document.querySelectorAll(".delete-btn");
-
-  DELETEBTN.forEach((button) => {
-    button.addEventListener("click", deleteItem);
-  });
-};
