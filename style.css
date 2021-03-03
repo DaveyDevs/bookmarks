@@ -93,3 +93,11 @@ ul {
   color: white;
   cursor: pointer;
 }
+
+.creds {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
