@@ -92,12 +92,13 @@ ul {
   background-color: var(--red);
   color: white;
   cursor: pointer;
-}
+} 
 
 .creds {
   bottom: 0;
   display: block;
-  position: absolute;
+  padding-top: 3em;
+  position: relative;
   text-align: center;
   width: 100%;
 }
